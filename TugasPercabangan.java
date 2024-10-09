@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class tugasPercabangan {
+public class tugas1alpro {
 
     public static void main(String[] args) {
         // Deklarasi variabel
@@ -11,11 +11,10 @@ public class tugasPercabangan {
         int waktuLembur;
         double bonus;
         double totalGaji;
+
         // Scanner untuk input
         Scanner scanner = new Scanner(System.in);
-        masaKerja       = scanner.nextInt();
-        waktuKerja      = scanner.nextInt();
-    
+        
         // Input dari user
         System.out.print("Masukkan masa kerja: ");
         masaKerja = scanner.nextInt();
@@ -34,8 +33,8 @@ public class tugasPercabangan {
         }
 
         // Hitung waktu lembur
-        if (waktuKerja > 40) { // 240 jam = 8jam/hari = 30 hari
-            waktuLembur = waktuKerja - 40;
+        if (waktuKerja > 240) { // 240 jam = 8jam/hari = 30 hari
+            waktuLembur = waktuKerja - 240;
         } else {
             waktuLembur = 0;
         }
@@ -48,25 +47,25 @@ public class tugasPercabangan {
 
         // Tutup Scanner
         scanner.close();
+
+        
+    
     }
 }
+ // Program hitung lama kerja dan total jam kerja
 
+    // Deklarasi
 
-    /*
-            // Program hitung lama kerja dan total jam kerja
-    
-            // Deklarasi
-    
-         // Var gaji pokok = 5000000, uangLembur = 50000, lamaKerja, totalJamKerja, totalJamLembur.; integer;
+        // Var gaji pokok = 5000000, uangLembur = 50000, lamaKerja, totalJamKerja, totalJamLembur.; integer;
         //      totalGaji, bonus,; double;
-    
-        // Algoritma
-    
-        //  input (lamaKerja);
+
+    // Algoritma
+
+    //  input (lamaKerja);
     //  input (totalJamKerja);
 
     // if masaKerja < 5 then
-        output (bonus = 0);
+    output (bonus = 0);
     else if masaKerja >= 5 and masaKerja <= 10 then
     output (bonus = gajiPokok = 0.05);
     else if masaKerja > 10 then
@@ -82,5 +81,3 @@ public class tugasPercabangan {
     //  output (totalGaji = gajiPokok * bonus + (TotalJamLembur * uangLembur);
 
     //End
-
-    */   
