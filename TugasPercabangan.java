@@ -2,8 +2,7 @@ import java.util.Scanner;
 
 public class TugasPercabangan{
     public static void main(String[] args){
-        int lamaKerja, jumlahJamKerja; 
-    public static void main(String[] args) {
+        
         // Deklarasi variabel
         int gajiPokok = 5000000;
         int uangLembur = 50000;
@@ -13,11 +12,8 @@ public class TugasPercabangan{
         double bonus;
         double totalGaji;
         
-
         // Scanner untuk input
         Scanner scanner = new Scanner(System.in);
-        lamaKerja       = scanner.nextInt();
-        jumlahJamKerja  = scanner.nextInt();
         
         // Input dari user
         System.out.print("Masukkan masa kerja: ");
@@ -35,8 +31,8 @@ public class TugasPercabangan{
             bonus = gajiPokok * 0.20;
         }
         // Hitung waktu lembur
-        if (waktuKerja > 240) { // 240 jam = 8jam/hari = 30 hari
-            waktuLembur = waktuKerja - 240;
+        if (waktuKerja > 40) { // 240 jam = 8jam/hari = 30 hari
+            waktuLembur = waktuKerja - 40;
         } else {
             waktuLembur = 0;
         }
@@ -56,7 +52,7 @@ public class TugasPercabangan{
     
     }
 }
-}
+/*
     // Program hitung lama kerja dan total jam kerja
     // Deklarasi
         // Var gaji pokok = 5000000, uangLembur = 50000, lamaKerja, totalJamKerja, totalJamLembur.; integer;
@@ -79,3 +75,4 @@ public class TugasPercabangan{
     end if
     //  output (totalGaji = gajiPokok * bonus + (TotalJamLembur * uangLembur);
     //End
+*/
