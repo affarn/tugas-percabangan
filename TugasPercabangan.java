@@ -1,90 +1,81 @@
 import java.util.Scanner;
 
-public class TugasPercabangan {
-
+public class TugasPercabangan{
+    public static void main(String[] args){
+        int lamaKerja, jumlahJamKerja; 
     public static void main(String[] args) {
-        // Membuat scanner untuk input dari user
-        Scanner scanner = new Scanner(System.in);
-
         // Deklarasi variabel
         int gajiPokok = 5000000;
-        double gajiAkhir, tambahan;
-        int uangLemburPerJam = 50000;
-        int jamLembur, masaKerja, jamKerja;
+        int uangLembur = 50000;
+        int masaKerja;
+        int waktuKerja;
+        int waktuLembur;
+        double bonus;
+        double totalGaji;
         
-        System.out.print("Masukkan masa kerja (dalam tahun): ");
+
+        // Scanner untuk input
+        Scanner scanner = new Scanner(System.in);
+        lamaKerja       = scanner.nextInt();
+        jumlahJamKerja  = scanner.nextInt();
+        
+        // Input dari user
+        System.out.print("Masukkan masa kerja: ");
         masaKerja = scanner.nextInt();
-        System.out.print("Masukkan total jam kerja dalam 1 bulan: ");
-        jamKerja = scanner.nextInt();
-
-        if (jamKerja > 40) { // 240 jam = 8 jam/hari * 30 hari
-            jamLembur = jamKerja - 40;
-        } else {
-            jamLembur = 0;
-        }
-
-        
+        System.out.print("Masukkan jumlah jam kerja: ");
+        waktuKerja = scanner.nextInt();
+        // Hitung tambahan berdasarkan masa kerja
         if (masaKerja < 5) {
-            tambahan = 0;
-        } else if (masaKerja >= 5 && masaKerja <= 10) {
-            tambahan = gajiPokok * 0.05; // Tambahan 5%
+            bonus = 0;
+        } else if (masaKerja >= 5 && masaKerja <=10)
+            bonus = gajiPokok * 0.05; //  5%
+        else if (masaKerja >= 10 && masaKerja <=20) {
+            bonus = gajiPokok * 0.10; // bonus 10%;
         } else {
-            tambahan = gajiPokok * 0.10; // Tambahan 10%
+            bonus = gajiPokok * 0.20;
         }
-
-        // Hitung gaji akhir
-        gajiAkhir = gajiPokok + tambahan + (uangLemburPerJam*jamLembur);
-
-        // Tampilkan hasil perhitungan
-        System.out.println("Gaji pokok: Rp " + gajiPokok);
-        System.out.println("Tambahan gaji: Rp " + tambahan);
-        System.out.println("Uang lembur: Rp " + uangLemburPerJam*jamLembur);
-        System.out.println("Gaji total yang diterima: Rp " + gajiAkhir);
+        // Hitung waktu lembur
+        if (waktuKerja > 240) { // 240 jam = 8jam/hari = 30 hari
+            waktuLembur = waktuKerja - 240;
+        } else {
+            waktuLembur = 0;
+        }
+        // Hitung total gaji
+        totalGaji = gajiPokok + bonus + (waktuLembur * uangLembur);
         
+        // Hasil
+        System.out.println("Total gaji yang didapat: Rp " + totalGaji);
+        // Tutup Scanner
         scanner.close();
+
+        /* 
+            Tuliskan proses perhitungan gaji di sini
+        */
+
+        System.out.println(totalGaji);
+    
     }
 }
-
-
-/* 
-        Program Perhitungan Gaji Karyawan
-
-            Deklarasi
-                Var uangLemburPerJam = 50000,
-                    jamKerjaPerHari = 8
-                    jamKerjaPerMinggu = 40,
-                    totalJamKerja,
-                    jamKerjaPerBulan = jamKerjaPerMinggu * 4 // 160 jam per bulan
-                    masaKerja,
-                    : integer;
-                    gajiPokok = 5000000,
-                    tambahanGaji = 0,
-                    uangLembur = 0,
-                    gajiAkhir,
-                    : double;
-                    
-
-            Algoritma
-                input (masaKerja);
-                input (totalJamKerja);
-
-                if masaKerja >= 5 and masaKerja <= 10 then
-                    output (tambahanGaji = 0.05 * gajiPokok);  // 5% tambahan
-                else if masaKerja > 10 then
-                    output (tambahanGaji = 0.10 * gajiPokok);  // 10% tambahan
-                end if
-
-                if totalJamKerja > jamKerjaPerBulan then
-                    output (uangLembur = (totalJamKerja - jamKerjaPerBulan) * uangLemburPerJam);
-
-
-                output (gajiPokok)
-                output (tambahanGaji)
-                output (uangLembur)
-                output (gajiAkhir = gajiPokok + tambahanGaji + uangLembur);
-
-            End
-        
-
-
-        */
+}
+    // Program hitung lama kerja dan total jam kerja
+    // Deklarasi
+        // Var gaji pokok = 5000000, uangLembur = 50000, lamaKerja, totalJamKerja, totalJamLembur.; integer;
+        //      totalGaji, bonus,; double;
+    // Algoritma
+    //  input (lamaKerja);
+    //  input (totalJamKerja);
+    // if masaKerja < 5 then
+        output (bonus = 0);
+    else if masaKerja >= 5 and masaKerja <= 10 then
+    output (bonus = gajiPokok = 0.05);
+    else if masaKerja > 10 then
+    output (bonus = gajiPokok = 0.10);
+    end if
+    
+    // if totalJamKerja > 160 then
+    output(totalJamLembur = totalJamKerja - 160);
+    else 
+        totalJamLembur = 0;
+    end if
+    //  output (totalGaji = gajiPokok * bonus + (TotalJamLembur * uangLembur);
+    //End
